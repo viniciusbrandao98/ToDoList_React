@@ -1,0 +1,21 @@
+import React from 'react'
+
+const TodoForm = () => {
+  return (
+    <div className='todo-form'>
+      <h2>Criar Tarefa:</h2>
+      <form>
+        <input type="text" placeholder='Adicione uma tarefa' />
+        <select>
+            <option value="">Selecione uma categoria</option>
+             <option value="Estudos">Estudos</option>
+              <option value="Trabalho">Trabalho</option>
+               <option value="Pessoal">Pessoal</option>
+        </select>
+        <button type="submit">Criar Taarefa</button>
+      </form>
+    </div>
+  )
+}
+
+export default TodoForm
