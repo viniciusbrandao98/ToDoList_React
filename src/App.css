@@ -34,11 +34,44 @@ h1 {
 
 button {
   margin: 3px;
+  color: #FFF;
   background-color: #333974;
   padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: .8;
+  transition: 0.3s;
+  border: none;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+button:active {
+  scale: 0.95;
 }
 
 p {
   padding: 10px 0;
 }
 
+.todo-form {
+  margin-bottom: 1.5em;
+}
+
+input, select {
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.complete {
+  background-color:green ;
+}
+
+.remove {
+  background-color: red;
+}

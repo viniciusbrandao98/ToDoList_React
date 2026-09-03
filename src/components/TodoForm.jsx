@@ -12,7 +12,7 @@ const TodoForm = () => {
               <option value="Trabalho">Trabalho</option>
                <option value="Pessoal">Pessoal</option>
         </select>
-        <button type="submit">Criar Taarefa</button>
+        <button type="submit">Criar Tarefa</button>
       </form>
     </div>
   )
