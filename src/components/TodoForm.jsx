@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const TodoForm = () => {
+const TodoForm = ({ addTodo }) => {
   const [value, setValue] = useState('');
   const [category, setCategory] = useState('');
 
@@ -8,6 +8,7 @@ const TodoForm = () => {
     e.preventDefault();
     if(!value || !category) return
     console.log(value, category);
+    addTodo(value, category);
    setValue("")
    setCategory("")
   }
