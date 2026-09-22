@@ -6,10 +6,10 @@ const TodoForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(!value || !category) return
     console.log(value, category);
-    console.log(Testando);
-    
-
+   setValue("")
+   setCategory("")
   }
 
   return (
@@ -20,12 +20,14 @@ const TodoForm = () => {
           type="text"
           placeholder='Adicione uma tarefa'
           onChange={(e) => setValue(e.target.value)}
+          value={value}
         />
-        <select onChange={(e) => setCategory(e.target.value)} >
+        <select value={category} onChange={(e) => setCategory(e.target.value)} >
           <option value="">Selecione uma categoria</option>
           <option value="Estudos">Estudos</option>
           <option value="Trabalho">Trabalho</option>
           <option value="Pessoal">Pessoal</option>
+          
         </select>
         <button type="submit">Criar Tarefa</button>
       </form>
