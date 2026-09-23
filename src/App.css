@@ -60,7 +60,8 @@ p {
   margin-bottom: 1.5em;
 }
 
-input, select {
+input,
+select {
   padding: 5px;
   margin: 5px 0;
   border: 1px solid #DDD;
@@ -68,8 +69,20 @@ input, select {
   width: 100%;
 }
 
+.todo-list {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  background-color: #efefef;
+}
+
+.content {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+}
+
+
 .complete {
-  background-color:green ;
+  background-color: green;
 }
 
 .remove {

@@ -6,11 +6,11 @@ const TodoForm = ({ addTodo }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(!value || !category) return
+    if (!value || !category) return
     console.log(value, category);
     addTodo(value, category);
-   setValue("")
-   setCategory("")
+    setValue("")
+    setCategory("")
   }
 
   return (
@@ -28,7 +28,6 @@ const TodoForm = ({ addTodo }) => {
           <option value="Estudos">Estudos</option>
           <option value="Trabalho">Trabalho</option>
           <option value="Pessoal">Pessoal</option>
-          
         </select>
         <button type="submit">Criar Tarefa</button>
       </form>
