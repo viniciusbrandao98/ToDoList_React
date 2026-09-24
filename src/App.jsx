@@ -28,32 +28,39 @@ function App() {
     },
   ])
 
-  const addTodo = ( text, category ) => {
+  const addTodo = (text, category) => {
 
     const newsTodos = [
-    ...todos,
-    {
-      id: Math.floor(Math.random() * 10000),
-      text,
-      category,
-      isCompleted: false,
-    },
+      ...todos,
+      {
+        id: Math.floor(Math.random() * 10000),
+        text,
+        category,
+        isCompleted: false,
+      },
     ];
     setTodos(newsTodos);
-};
+  };
 
-return (
-  <div className="app">
-    <h1>Lista de tarefas</h1>
-    <div className="todo-list">
-      {todos.map((lista) => (
-        <Todo key={lista.id} lista={lista} />
-      ))}
+  const removeTodo = (id) => {
+    const filteredTodos = todos.filter((tarefa) =>
+      tarefa.id !== id ? tarefa : null
+    );
+    setTodos(filteredTodos)
+  }
+
+  return (
+    <div className="app">
+      <h1>Lista de tarefas</h1>
+      <div className="todo-list">
+        {todos.map((lista) => (
+          <Todo key={lista.id} lista={lista} removeTodo={removeTodo} />
+        ))}
+      </div>
+      <TodoForm addTodo={addTodo} />
     </div>
-    <TodoForm addTodo={addTodo} />
-  </div>
 
-)
+  )
 }
 
 export default App

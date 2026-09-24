@@ -72,12 +72,15 @@ select {
 .todo-list {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  background-color: #efefef;
 }
 
 .content {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 12px;
+  background-color: #FFF;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
 
